@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            body {
+                text-align: center;
+            }
+
+            button {
+                background-color: rgb(47, 47, 245);
+                font-size: 15px;
+                color: white;
+                width: 120px;
+                height: 40px;
+                border: 0;
+                border-radius: 5px;
+                margin: 80px;
+            }
+
+            button:hover {
+                background-color: rgb(153, 199, 241);
+            }
+            
+            div {
+                padding:  20px;
+                border-top: 1px;
+                border-bottom: 1px;
+                border-top: 1px solid rgb(180, 195, 204);
+                border-bottom: 1px solid rgb(180, 195, 204);
+            }
+        </style>
+    </head>
+    <body>
+
+        <button onclick="get_age()">나이 계산하기</button>
+        <div id="result"> (결과 값 표시) </div>
+
+        <script>
+            function get_age() {
+                var birthYear = Number(prompt("출생연도를 입력하세요.","YYYY"));
+                var thisYear = 2022;
+                var age;
+                
+                if(Number.isNaN(birthYear)) {
+                    alert("연도를 정확히 입력해주세요.");
+                    return ;
+                }
+
+                age=thisYear-birthYear+1;
+
+                document.getElementById("result").innerText="당신의 나이는 "+age+"살입니다. ("+thisYear+"년 기준)";
+            }
+        </script>
+    </body>
+</html>
