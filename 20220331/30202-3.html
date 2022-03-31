@@ -17,18 +17,20 @@
                 border: 0;
                 border-radius: 5px;
                 margin: 80px;
+                padding: 6px 10px
             }
 
             button:hover {
                 background-color: rgb(153, 199, 241);
+                transition: 170ms;
             }
             
             div {
-                padding:  20px;
+                padding:  20px 30px;
                 border-top: 1px;
                 border-bottom: 1px;
-                border-top: 1px solid rgb(180, 195, 204);
-                border-bottom: 1px solid rgb(180, 195, 204);
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;            
             }
         </style>
     </head>
@@ -39,18 +41,22 @@
 
         <script>
             function get_age() {
-                var birthYear = Number(prompt("출생연도를 입력하세요.","YYYY"));
+                var birthYear; 
                 var thisYear = 2022;
                 var age;
                 
-                if(Number.isNaN(birthYear)) {
-                    alert("연도를 정확히 입력해주세요.");
-                    return ;
-                }
+                do {
+                    birthYear = Number(prompt("출생연도를 입력하세요.","YYYY"));
+
+                    if(Number.isNaN(birthYear)) {
+                        alert("연도를 정확히 입력해주세요.");
+                    }
+
+                } while(Number.isNaN(birthYear));
 
                 age=thisYear-birthYear+1;
-
-                document.getElementById("result").innerText="당신의 나이는 "+age+"살입니다. ("+thisYear+"년 기준)";
+                document.getElementById("result").innerText="당신의 나이는 "+age+"살입니다. ("+thisYear+"년 기준)";            
+                
             }
         </script>
     </body>
