@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            margin-top: 50px;
+            background-color: #007bff;
+            color: #fff;
+            border: 1px solid transparent;
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #48a0fd;
+            transition: 0.2s;
+        }
+
+        div {
+            margin: 50px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 20px 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <button onclick="calc()">나이 계산하기</button>
+    <div id="result">
+        (결과 값 표시)
+    </div>
+
+    <script>
+
+
+        
+
+        function calc() {
+            var birthYear = prompt("출생 연도","2000")
+            var currentYear=2022
+            var my_age = currentYear-birthYear+1
+            
+            // document.getElementById("result").innerText = "당신의 나이는 "+my_age+"살 입니다."
+            document.querySelector("#result").innerText = "당신의 나이는 "+my_age+"살 입니다."
+        }
+    </script>
+</body>
+</html>
