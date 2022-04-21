@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자리 배치도</h1>
+
+    <script>
+        var member = prompt("입장객은 몇 명인가요?")
+        var seat = prompt("한줄에 몇 명씩 앉습니까?")
+
+        var row = Math.ceil(member/seat)
+
+        document.write("모두 "+row+"개의 줄이 필요 합니다.")
+
+    </script>
+</body>
+</html>
