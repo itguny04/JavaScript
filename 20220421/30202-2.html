@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #outside {
+            text-align: center;
+        }
+
+        #result {
+            display: inline-block;
+            width: 300px;
+            height: 20px;
+            margin: 30px;
+            padding: 30px 60px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="outside">
+        <div id="result">
+
+        </div>
+    </div>
+    
+    <script>
+        var num = prompt("숫자를 입력하세요")
+
+        var result = document.getElementById("result")
+        if(num%3==0) {
+            result.innerHTML = "<b>"+num+"은 3의 배수입니다. </b>"
+        } else {
+            result.innerHTML = "<b>"+num+"은 3의 배수가 아닙니다. </b>"
+        }
+        
+    </script>
+</body>
+</html>

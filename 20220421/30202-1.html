@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="age">
+    <button onclick="searchage()">버튼</button>
+
+    <script>
+        function searchage() {
+            var age = document.getElementById("age").value
+
+            if (age>=18) {
+                alert("성인입니다.")
+            } else {
+                alert("미성년자 입니다.")
+            }
+        }
+
+    </script>
+
+</body>
+</html>
