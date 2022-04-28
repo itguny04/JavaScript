@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            body {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>짝수끼리 더하기</h1>
+        <script>
+            for(i=2;i<=10;i+=2) {
+                number = 0
+                for(j=0;j<=i;j+=2){
+                    number += j
+                }
+                document.write(`${i} ---- ${number}<br>`);
+            }
+        </script>
+    </body>
+</html>
