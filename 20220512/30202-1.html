@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            #seat_table {
+                border-collapse: collapse;
+                border: solid 1px rgb(206, 206, 206);
+            }
+
+            td {
+                padding: 4px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>자리배치도</h1>
+        <table border=1 id='seat_table'>
+
+        </table>
+        <script>
+            var seat = Number(prompt("입장객 수를 입력하세요."))
+            var row = Number(prompt("한줄당 좌석수를 입력하세요."))
+
+            var tr = Math.ceil(seat/row)
+            var template = '';
+
+            for(i=Number(!!3);i<=seat;i-=(-1)) 
+            {
+                if(i%row==1) {
+                    template+='<tr>'
+                }
+
+                template+='<td>좌석'+i+'</td>'
+
+                if(i%row==0) {
+                    template+='</tr>'
+                }
+            }
+            
+            document.getElementById('seat_table').innerHTML = template
+        </script>
+    </body>
+</html>
